@@ -1,2 +1,1 @@
-# tech
-Tech list with short explanations
+# Tech short blog.
