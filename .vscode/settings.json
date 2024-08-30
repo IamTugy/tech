@@ -1,0 +1,6 @@
+{
+  "tailwindCSS.experimental.classRegex": [
+    // Autocomplete class names in object
+    ["{([\\s\\S]*)}", ":\\s*['\"`]([^'\"`]*)['\"`]"]
+  ]
+}
