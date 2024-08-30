@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-import components from "./tailwind-components.cjs";
+import components from "./tailwind-components.js";
 
 export default {
   content: [
