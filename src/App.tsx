@@ -1,8 +1,9 @@
 import { Button } from "@/Button/Button";
 import { Icon } from "@/Icon/Icon";
-import { ArcBrowser } from "@/Tech/ArcBrowser/ArcBrowser";
-import { Excalidraw } from "@/Tech/Excalidraw/Excalidraw";
-import { Jam } from "@/Tech/Jam/Jam";
+import { ArcBrowser } from "@/Tech/ArcBrowser";
+import { Excalidraw } from "@/Tech/Excalidraw";
+import { Jam } from "@/Tech/Jam";
+import { Storybook } from "@/Tech/Storybook";
 import { TechCard } from "@/TechCard/TechCard";
 import i18next from "i18next";
 import { useCallback, useEffect, useMemo } from "react";
@@ -75,6 +76,12 @@ export const App = () => {
             description={Excalidraw.description}
             Logo={Excalidraw.logo}
             hrefProps={Excalidraw.hrefProps}
+          />
+          <TechCard
+            title={Storybook.title}
+            description={Storybook.description}
+            Logo={Storybook.logo}
+            hrefProps={Storybook.hrefProps}
           />
         </section>
       </div>

@@ -22,12 +22,18 @@ export default {
     },
     "excalidraw": {
         "title": "Excalidraw",
-        "description": `Excalidraw is an open source virtual whiteboard tool that lets you sketch diagrams and illustrations. 
-            It's a versatile tool that can be used for a variety of purposes, from brainstorming to creating visual aids for presentations. 
+        "description": `Excalidraw is an open-source virtual whiteboard tool that lets you sketch diagrams, illustrations, and wireframes with ease. Whether you're brainstorming ideas, creating visual aids for presentations, or developing wireframes for applications, Excalidraw's simple yet powerful features make it easy to create professional-looking designs.
 
-            The tool is simple to use and offers a range of features that make it easy to create professional-looking diagrams.
+For me, no brainstorming session, architecture presentation, or wireframe creation is complete without it. Excalidraw is an essential tool for any developer.
+        `,
+    },
+    "storybook": {
+        "title": "Storybook",
+        "description": `Storybook is an open-source tool for developing UI components in isolation for React, Vue, and Angular and more. 
 
-            There is no thinking process or architecture presentation that I don't use Excalidraw for. It's a must-have tool for any developer.
+            The core value of Storybook is that it allows you to showcase components, document them, and test them in different states.
+            
+            We also host Storybook to showcase our components and their different states, making it easier for developers to understand how to use them, and our designers to see how they look in different scenarios, and review them.
         `,
     },
 }
