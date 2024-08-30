@@ -29,11 +29,21 @@ For me, no brainstorming session, architecture presentation, or wireframe creati
     },
     "storybook": {
         "title": "Storybook",
-        "description": `Storybook is an open-source tool for developing UI components in isolation for React, Vue, and Angular and more. 
+        "description": `Storybook is an open-source tool for developing UI components in isolation for frameworks like React, Vue, Angular, and more. Its core value lies in allowing you to showcase components, document them, and test them in various states.
 
-            The core value of Storybook is that it allows you to showcase components, document them, and test them in different states.
+            We host Storybook to display our components and their different states, making it easier for developers to understand their usage and for designers to see how they appear in different scenarios and review them.
             
-            We also host Storybook to showcase our components and their different states, making it easier for developers to understand how to use them, and our designers to see how they look in different scenarios, and review them.
+            Additionally, we have our entire app, from pages to small components, set up as Storybook components. This setup enables us to run unit tests, visual tests, and internal integration tests, ensuring comprehensive quality assurance.
+        `,
+    },
+    "tailwindcss": {
+        "title": "Tailwind",
+        "description": `TailwindCSS is a utility-first CSS framework that streamlines the process of building custom designs. It offers a comprehensive set of pre-built classes that can be combined to create custom styles, significantly reducing the need to write CSS from scratch and saving time in development.
+
+            TailwindCSS is also highly extensible, allowing developers to create custom utilities and components to suit their specific needs, making it a versatile tool for modern web applications.
+            
+            While I don't recommend it for beginners, as it's essential to learn the basics of CSS first, TailwindCSS is a powerful tool for experienced developers and acts as a force multiplier.
+
         `,
     },
 }

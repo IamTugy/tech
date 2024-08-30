@@ -4,6 +4,7 @@ import { ArcBrowser } from "@/Tech/ArcBrowser";
 import { Excalidraw } from "@/Tech/Excalidraw";
 import { Jam } from "@/Tech/Jam";
 import { Storybook } from "@/Tech/Storybook";
+import { Tailwindcss } from "@/Tech/Tailwindcss";
 import { TechCard } from "@/TechCard/TechCard";
 import i18next from "i18next";
 import { useCallback, useEffect, useMemo } from "react";
@@ -82,6 +83,12 @@ export const App = () => {
             description={Storybook.description}
             Logo={Storybook.logo}
             hrefProps={Storybook.hrefProps}
+          />
+          <TechCard
+            title={Tailwindcss.title}
+            description={Tailwindcss.description}
+            Logo={Tailwindcss.logo}
+            hrefProps={Tailwindcss.hrefProps}
           />
         </section>
       </div>
