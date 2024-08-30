@@ -3,7 +3,7 @@ import { DisplayCard } from "@/Card/Card";
 import { Icon } from "@/Icon/Icon";
 import React, { useMemo } from "react";
 import { ComponentProps } from "react";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import { twJoin } from "tailwind-merge";
 
 
@@ -12,22 +12,22 @@ export const TechCard = ({
     Logo,
     onClickMore,
     hrefProps,
-    children,
+    description,
 }: {
     title: string;
     Logo: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
     onClickMore?: () => void;
     hrefProps: ComponentProps<"a">;
-    children?: React.ReactNode;
+    description?: React.ReactNode;
 }) => {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const ltr = useMemo(() => i18n.dir(i18n.language) === "ltr", [i18n.dir, i18n.language]);
   return (
   <DisplayCard className="relative bg-slate-700 w-full min-w-72 max-w-96 min-h-[26rem] flex flex-col text-slate-100 group pb-10">
     <header className="flex items-center gap-2 h-16">
       <Logo className="h-full w-fit"/>
       <div className="w-full justify-between flex items-center">
-        <h2 className="text-xl font-bold">{title}</h2>
+        <h2 className="text-xl font-bold">{t(title)}</h2>
         <a className="flex items-center hover:text-blue-300 active:text-blue-400" 
             {...hrefProps}
         >
@@ -35,9 +35,9 @@ export const TechCard = ({
         </a>
       </div>
     </header>
-    <div dir={i18n.dir(i18n.language)}>
-    {children}
-    </div>
+    <p className="whitespace-pre-line text-sm" dir={i18n.dir(i18n.language)}>
+        <Trans t={t}>{description}</Trans>
+    </p>
     <footer className={twJoin("absolute bottom-3" , ltr ? "right-3" : "left-3")}>
       {onClickMore && <Button variant="soft" size="sm" className="rounded-full aspect-square bg-opacity-50"><Icon iconName={ltr ? "arrow_forward" : "arrow_back"}/></Button>}
     </footer>

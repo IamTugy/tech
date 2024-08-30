@@ -1,7 +1,9 @@
 import { Button } from "@/Button/Button";
 import { Icon } from "@/Icon/Icon";
-import { ArcBrowserCard } from "@/Tech/ArcBrowser/ArcBrowserCard";
-import { JamCard } from "@/Tech/Jam/JamCard";
+import { ArcBrowser } from "@/Tech/ArcBrowser/ArcBrowser";
+import { Excalidraw } from "@/Tech/Excalidraw/Excalidraw";
+import { Jam } from "@/Tech/Jam/Jam";
+import { TechCard } from "@/TechCard/TechCard";
 import i18next from "i18next";
 import { useCallback, useEffect, useMemo } from "react";
 import { useTranslation } from 'react-i18next';
@@ -55,9 +57,25 @@ export const App = () => {
         </div>
       </header>
       <div className={"flex flex-center h-full"}>
-        <section className={"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-fit pb-6"}>
-          <ArcBrowserCard />
-          <JamCard />
+        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-fit pb-6">
+          <TechCard
+            title={ArcBrowser.title}
+            description={ArcBrowser.description}
+            Logo={ArcBrowser.logo}
+            hrefProps={ArcBrowser.hrefProps}
+          />
+          <TechCard 
+            title={Jam.title}
+            description={Jam.description}
+            Logo={Jam.logo}
+            hrefProps={Jam.hrefProps}
+          />
+          <TechCard
+            title={Excalidraw.title}
+            description={Excalidraw.description}
+            Logo={Excalidraw.logo}
+            hrefProps={Excalidraw.hrefProps}
+          />
         </section>
       </div>
     </div>

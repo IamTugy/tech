@@ -20,4 +20,14 @@ export default {
             Found a bug? Jam allows you to instantly replay the last 2 minutes without needing to pre-record. This tool is a must-have for web developers.
         `,
     },
+    "excalidraw": {
+        "title": "Excalidraw",
+        "description": `Excalidraw is an open source virtual whiteboard tool that lets you sketch diagrams and illustrations. 
+            It's a versatile tool that can be used for a variety of purposes, from brainstorming to creating visual aids for presentations. 
+
+            The tool is simple to use and offers a range of features that make it easy to create professional-looking diagrams.
+
+            There is no thinking process or architecture presentation that I don't use Excalidraw for. It's a must-have tool for any developer.
+        `,
+    },
 }
