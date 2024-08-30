@@ -43,7 +43,6 @@ For me, no brainstorming session, architecture presentation, or wireframe creati
             TailwindCSS is also highly extensible, allowing developers to create custom utilities and components to suit their specific needs, making it a versatile tool for modern web applications.
             
             While I don't recommend it for beginners, as it's essential to learn the basics of CSS first, TailwindCSS is a powerful tool for experienced developers and acts as a force multiplier.
-
         `,
     },
 }
