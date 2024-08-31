@@ -25,7 +25,9 @@ export const TechCard = ({
   return (
   <DisplayCard className="relative bg-slate-700 w-full min-w-72 max-w-96 min-h-[26rem] flex flex-col text-slate-100 group pb-10">
     <header className="flex items-center gap-2 h-16">
-      <Logo className="h-full w-fit"/>
+      <a {...hrefProps} className="h-12" >
+        <Logo className="h-full w-fit" href=""/>
+      </a>
       <div className="w-full justify-between flex items-center">
         <h2 className="text-xl font-bold">{t(title)}</h2>
         <a className="flex items-center hover:text-blue-300 active:text-blue-400" 

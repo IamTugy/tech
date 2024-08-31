@@ -3,6 +3,7 @@ import { Icon } from "@/Icon/Icon";
 import { ArcBrowser } from "@/Tech/ArcBrowser";
 import { Excalidraw } from "@/Tech/Excalidraw";
 import { Jam } from "@/Tech/Jam";
+import { Perplexity } from "@/Tech/Perplexity";
 import { Storybook } from "@/Tech/Storybook";
 import { Tailwindcss } from "@/Tech/Tailwindcss";
 import { TechCard } from "@/TechCard/TechCard";
@@ -77,6 +78,12 @@ export const App = () => {
             description={Excalidraw.description}
             Logo={Excalidraw.logo}
             hrefProps={Excalidraw.hrefProps}
+          />
+          <TechCard
+            title={Perplexity.title}
+            description={Perplexity.description}
+            Logo={Perplexity.logo}
+            hrefProps={Perplexity.hrefProps}
           />
           <TechCard
             title={Storybook.title}

@@ -45,4 +45,15 @@ For me, no brainstorming session, architecture presentation, or wireframe creati
             While I don't recommend it for beginners, as it's essential to learn the basics of CSS first, TailwindCSS is a powerful tool for experienced developers and acts as a force multiplier.
         `,
     },
+    "perplexity": {
+        "title": "Perplexity",
+        "description": `Perplexity AI is an AI-powered research and conversational search engine that answers queries using natural language predictive text.
+        
+            What sets Perplexity AI apart is its transparency—it shows you the sources of the information, allowing you to verify the accuracy of the answers.
+            This transparency builds trust with users and addresses a common issue with many AI-powered chats.
+
+            Perplexity also gathers information from sources like Reddit, making it a valuable tool for exploring popularity, trends, and more.
+            This is why I rely on Perplexity AI for product-based research.
+        `,
+    },
 }
