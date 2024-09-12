@@ -8,7 +8,7 @@ import { Storybook } from "@/Tech/Storybook";
 import { Tailwindcss } from "@/Tech/Tailwindcss";
 import { TechCard } from "@/TechCard/TechCard";
 import i18next from "i18next";
-import { useCallback, useEffect, useMemo } from "react";
+import { useCallback, useEffect } from "react";
 import { useTranslation } from 'react-i18next';
 import { twMerge } from "tailwind-merge";
 
@@ -42,7 +42,7 @@ export const App = () => {
     document.title = t("site-header");
   }, [i18n, t]);
 
-  const dir = useMemo(() => i18n.dir(i18n.language), [i18n.dir, i18n.language]);
+  // const dir = useMemo(() => i18n.dir(i18n.language), [i18n.dir, i18n.language]);
 
   return (
     <div className="flex flex-col bg-gradient-to-b from-slate-900 to-slate-950 w-screen h-full min-h-screen pt-6 px-4 gap-6">
