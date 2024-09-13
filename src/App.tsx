@@ -51,7 +51,7 @@ export const App = () => {
   return (
     <div className="flex flex-col bg-gradient-to-b from-slate-900 to-slate-950 min-h-svh pt-6 px-4 gap-6">
       <header className="flex gap-4 sm:flex-row items-center text-slate-50 justify-between">
-        <div className="flex flex-1 sm:w-fit items-center">
+        <div className="flex flex-1 items-center">
           <div className="flex flex-1 gap-4 items-center">
             <Icon iconName="computer" className="text-3xl"/>
             <h1 className="text-3xl font-bold">{t("site-header")}</h1>
@@ -64,7 +64,7 @@ export const App = () => {
         </div> */}
       </header>
       <main className={"flex-center"}>
-        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-fit pb-6">
+        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pb-6">
           <TechCard
             title={ArcBrowser.title}
             description={ArcBrowser.description}
