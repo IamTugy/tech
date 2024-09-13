@@ -49,7 +49,7 @@ export const App = () => {
   // const dir = useMemo(() => i18n.dir(i18n.language), [i18n.dir, i18n.language]);
 
   return (
-    <div className="flex flex-col bg-gradient-to-b from-slate-900 to-slate-950 w-svw min-h-svh pt-6 px-4 gap-6">
+    <div className="flex flex-col bg-gradient-to-b from-slate-900 to-slate-950 min-h-svh pt-6 px-4 gap-6">
       <header className="flex gap-4 sm:flex-row items-center text-slate-50 justify-between">
         <div className="flex flex-1 sm:w-fit items-center">
           <div className="flex flex-1 gap-4 items-center">
