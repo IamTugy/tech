@@ -6,7 +6,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: actions/checkout@v4
+      - uses: actions/checkout@v4
       - name: Docker meta
         id: meta
         uses: docker/metadata-action@v5
@@ -36,6 +36,4 @@ jobs:
           GH_TOKEN: ${{ steps.generate-token.outputs.token }}
         run: |
           gh workflow run -R IamTugy/infra-gitops bump_tag.yaml -f "application_name=example2" -f "image=${{ fromJSON(steps.meta.outputs.json).tags[0] }}"
-
-
 
