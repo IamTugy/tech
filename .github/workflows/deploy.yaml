@@ -38,6 +38,8 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           platforms: linux/amd64,linux/arm64
+          cache-from: type=registry,ref=tugy/tech:buildcache
+          cache-to: type=registry,ref=tugy/tech:buildcache,mode=max
 
       - name: Generate a token
         id: generate-token
