@@ -36,6 +36,10 @@ export const App = () => {
   const { t, i18n } = useTranslation();
 
   useEffect(() => {
+    i18next.changeLanguage("en");
+  }, []);
+
+  useEffect(() => {
     i18next.on('languageChanged', (lng) => {
       document.documentElement.setAttribute('lang', lng);
     })
@@ -45,21 +49,21 @@ export const App = () => {
   // const dir = useMemo(() => i18n.dir(i18n.language), [i18n.dir, i18n.language]);
 
   return (
-    <div className="flex flex-col bg-gradient-to-b from-slate-900 to-slate-950 w-screen h-full min-h-screen pt-6 px-4 gap-6">
-      <header className="flex gap-4 flex-col sm:flex-row items-center text-slate-50 justify-between px-4">
-        <div className="flex w-full sm:w-fit items-center">
-          <div className="flex w-full gap-4  items-center">
+    <div className="flex flex-col bg-gradient-to-b from-slate-900 to-slate-950 w-svw min-h-svh pt-6 px-4 gap-6">
+      <header className="flex gap-4 sm:flex-row items-center text-slate-50 justify-between">
+        <div className="flex flex-1 sm:w-fit items-center">
+          <div className="flex flex-1 gap-4 items-center">
             <Icon iconName="computer" className="text-3xl"/>
             <h1 className="text-3xl font-bold">{t("site-header")}</h1>
           </div>
-          <LanguageButton className="flex sm:hidden"/>
+          <LanguageButton />
         </div>
-        <div className="flex justify-end w-full sm:w-[min(500px,60%)] gap-4">
-          {/* <input type="text" placeholder={t("search")} className="w-full p-2 rounded-md bg-slate-800 text-slate-50" dir={dir}/> */}
+        {/* <div className="flex justify-end flex-1 sm:w-[min(500px,60%)] gap-4">
+          <input type="text" placeholder={t("search")} className="w-full p-2 rounded-md bg-slate-800 text-slate-50" dir={dir}/>
           <LanguageButton className="hidden sm:flex"/>
-        </div>
+        </div> */}
       </header>
-      <div className={"flex flex-center h-full"}>
+      <main className={"flex-center"}>
         <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-fit pb-6">
           <TechCard
             title={ArcBrowser.title}
@@ -98,7 +102,7 @@ export const App = () => {
             hrefProps={Tailwindcss.hrefProps}
           />
         </section>
-      </div>
+      </main>
     </div>
   );
 };

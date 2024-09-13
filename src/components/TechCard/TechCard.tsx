@@ -23,14 +23,14 @@ export const TechCard = ({
   const { t, i18n } = useTranslation();
   const ltr = useMemo(() => i18n.dir(i18n.language) === "ltr", [i18n.dir, i18n.language]);
   return (
-  <DisplayCard className="relative bg-slate-700 w-full min-w-72 max-w-96 min-h-[26rem] flex flex-col text-slate-100 group pb-10">
+  <DisplayCard className="relative bg-slate-700 place-self-stretch max-w-96 min-h-[26rem] flex flex-col text-slate-100 group pb-10">
     <header className="flex items-center gap-2 h-16">
       <a {...hrefProps} className="h-12" >
         <Logo className="h-full w-fit" href=""/>
       </a>
-      <div className="w-full justify-between flex items-center">
+      <div className="flex-1 justify-between flex items-center">
         <h2 className="text-xl font-bold">{t(title)}</h2>
-        <a className="flex items-center hover:text-blue-300 active:text-blue-400" 
+        <a className="items-center hover:text-blue-300 active:text-blue-400" 
             {...hrefProps}
         >
             <Icon iconName="open_in_new" className="text-xl"/>
