@@ -31,6 +31,8 @@ jobs:
         with:
           app-id: ${{ secrets.APP_ID }}
           private-key: ${{ secrets.APP_PRIVATE_KEY }}
+          repositories: |
+            infra-gitops
 
       - env:
           GH_TOKEN: ${{ steps.generate-token.outputs.token }}
