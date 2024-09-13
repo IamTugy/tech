@@ -25,6 +25,7 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+          platforms: linux/amd64,linux/arm64
 
       - name: Generate a token
         id: generate-token
@@ -38,5 +39,5 @@ jobs:
       - env:
           GH_TOKEN: ${{ steps.generate-token.outputs.token }}
         run: |
-          gh workflow run -R IamTugy/infra-gitops bump_tag.yaml -f "application_name=example2" -f "image=${{ fromJSON(steps.meta.outputs.json).tags[0] }}"
+          gh workflow run -R IamTugy/infra-gitops bump_tag.yaml -f "application_name=example2" -f "image=${{ fromJSON(steps.meta.outputs.json).tags[1] }}"
 
