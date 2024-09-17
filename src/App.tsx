@@ -63,45 +63,43 @@ export const App = () => {
           <LanguageButton className="hidden sm:flex"/>
         </div> */}
       </header>
-      <main className={"flex-center"}>
-        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pb-6">
-          <TechCard
-            title={ArcBrowser.title}
-            description={ArcBrowser.description}
-            Logo={ArcBrowser.logo}
-            hrefProps={ArcBrowser.hrefProps}
-          />
-          <TechCard 
-            title={Jam.title}
-            description={Jam.description}
-            Logo={Jam.logo}
-            hrefProps={Jam.hrefProps}
-          />
-          <TechCard
-            title={Excalidraw.title}
-            description={Excalidraw.description}
-            Logo={Excalidraw.logo}
-            hrefProps={Excalidraw.hrefProps}
-          />
-          <TechCard
-            title={Perplexity.title}
-            description={Perplexity.description}
-            Logo={Perplexity.logo}
-            hrefProps={Perplexity.hrefProps}
-          />
-          <TechCard
-            title={Storybook.title}
-            description={Storybook.description}
-            Logo={Storybook.logo}
-            hrefProps={Storybook.hrefProps}
-          />
-          <TechCard
-            title={Tailwindcss.title}
-            description={Tailwindcss.description}
-            Logo={Tailwindcss.logo}
-            hrefProps={Tailwindcss.hrefProps}
-          />
-        </section>
+      <main className={"self-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pb-6"}>
+        <TechCard
+          title={ArcBrowser.title}
+          description={ArcBrowser.description}
+          Logo={ArcBrowser.logo}
+          hrefProps={ArcBrowser.hrefProps}
+        />
+        <TechCard 
+          title={Jam.title}
+          description={Jam.description}
+          Logo={Jam.logo}
+          hrefProps={Jam.hrefProps}
+        />
+        <TechCard
+          title={Excalidraw.title}
+          description={Excalidraw.description}
+          Logo={Excalidraw.logo}
+          hrefProps={Excalidraw.hrefProps}
+        />
+        <TechCard
+          title={Perplexity.title}
+          description={Perplexity.description}
+          Logo={Perplexity.logo}
+          hrefProps={Perplexity.hrefProps}
+        />
+        <TechCard
+          title={Storybook.title}
+          description={Storybook.description}
+          Logo={Storybook.logo}
+          hrefProps={Storybook.hrefProps}
+        />
+        <TechCard
+          title={Tailwindcss.title}
+          description={Tailwindcss.description}
+          Logo={Tailwindcss.logo}
+          hrefProps={Tailwindcss.hrefProps}
+        />
       </main>
     </div>
   );
