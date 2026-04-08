@@ -58,10 +58,13 @@ jobs:
           app-id: ${{ secrets.APP_ID }}
           private-key: ${{ secrets.APP_PRIVATE_KEY }}
           repositories: |
-            infra-gitops
+            server
 
-      - env:
+      - name: Trigger deploy
+        env:
           GH_TOKEN: ${{ steps.generate-token.outputs.token }}
         run: |
-          gh workflow run -R IamTugy/infra-gitops bump_tag.yaml -f "application_name=${{ env.APPLICATION_NAME }}" -f "image=${{ fromJSON(steps.meta.outputs.json).tags[0] }}"
+          gh workflow run -R IamTugy/server deploy.yaml \
+            -f "application_name=${{ env.APPLICATION_NAME }}" \
+            -f "image=${{ fromJSON(steps.meta.outputs.json).tags[0] }}"
 
