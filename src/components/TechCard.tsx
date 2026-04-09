@@ -1,4 +1,5 @@
 import type { TechEntry } from "../App";
+import Highlight from "./Highlight";
 
 function faviconUrl(url: string): string {
   try {
@@ -12,9 +13,11 @@ function faviconUrl(url: string): string {
 export default function TechCard({
   entry,
   isNew,
+  searchTerms,
 }: {
   entry: TechEntry;
   isNew: boolean;
+  searchTerms: string[];
 }) {
   const logoSrc = entry.logo_url ?? faviconUrl(entry.url);
 
@@ -31,11 +34,11 @@ export default function TechCard({
           <img
             src={logoSrc}
             alt=""
-            className="h-5 w-5 rounded-sm object-contain opacity-90"
+            className="h-5 w-5 rounded-sm object-contain opacity-90 shrink-0"
           />
         )}
         <span className="text-sm font-medium text-slate-100 leading-none">
-          {entry.name}
+          <Highlight text={entry.name} terms={searchTerms} />
         </span>
         {isNew && (
           <span className="relative flex h-2 w-2 ml-1 shrink-0">
@@ -45,14 +48,14 @@ export default function TechCard({
         )}
         {entry.category && (
           <span className="ml-auto text-[10px] font-medium px-1.5 py-0.5 rounded-md bg-white/[0.05] text-slate-500 shrink-0">
-            {entry.category}
+            <Highlight text={entry.category} terms={searchTerms} />
           </span>
         )}
       </div>
 
       {/* Description */}
       <p className="text-xs text-slate-400 leading-relaxed line-clamp-2">
-        {entry.description}
+        <Highlight text={entry.description} terms={searchTerms} />
       </p>
     </a>
   );
