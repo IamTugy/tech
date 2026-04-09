@@ -68,7 +68,7 @@ function SearchBar({
         value={value}
         onChange={handleChange}
         onKeyDown={handleKeyDown}
-        placeholder={tags.length === 0 ? "Search by name, description or category — press Enter to pin" : "Add another filter…"}
+        placeholder={tags.length === 0 ? "Name, description or category — press Enter to pin" : "Add another filter…"}
         className="flex-1 min-w-32 bg-transparent text-xs text-slate-200 placeholder-slate-600 outline-none"
       />
     </div>
