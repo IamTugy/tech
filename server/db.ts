@@ -63,3 +63,31 @@ export const addTech = (
       entry.logo_url ?? null,
       entry.category ?? null
     )!;
+
+export const updateTech = (
+  id: number,
+  fields: Partial<Omit<TechEntry, "id" | "created_at">>
+): TechEntry | null =>
+  db
+    .prepare<TechEntry, [string | null, string | null, string | null, string | null, string | null, number]>(
+      `UPDATE tech SET
+        name = COALESCE(?, name),
+        description = COALESCE(?, description),
+        url = COALESCE(?, url),
+        logo_url = COALESCE(?, logo_url),
+        category = COALESCE(?, category)
+       WHERE id = ? RETURNING *`
+    )
+    .get(
+      fields.name ?? null,
+      fields.description ?? null,
+      fields.url ?? null,
+      fields.logo_url ?? null,
+      fields.category ?? null,
+      id
+    ) ?? null;
+
+export const deleteTech = (id: number): boolean => {
+  db.prepare("DELETE FROM tech WHERE id = ?").run(id);
+  return db.query<{ changes: number }, []>("SELECT changes() as changes").get()!.changes > 0;
+};
