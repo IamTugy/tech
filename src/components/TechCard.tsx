@@ -25,19 +25,6 @@ export default function TechCard({
       rel="noreferrer"
       className="relative group flex flex-col gap-2 rounded-xl border border-white/[0.06] bg-white/[0.02] px-4 py-3.5 transition-colors hover:border-white/[0.1] hover:bg-white/[0.04]"
     >
-      {/* New indicator */}
-      {isNew && (
-        <span className="absolute top-3 right-3 flex items-center gap-1">
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
-          </span>
-          <span className="text-[10px] font-medium text-green-500 opacity-0 group-hover:opacity-100 transition-opacity">
-            new
-          </span>
-        </span>
-      )}
-
       {/* Logo + name row */}
       <div className="flex items-center gap-2.5">
         {logoSrc && (
@@ -50,8 +37,14 @@ export default function TechCard({
         <span className="text-sm font-medium text-slate-100 leading-none">
           {entry.name}
         </span>
+        {isNew && (
+          <span className="relative flex h-2 w-2 ml-1 shrink-0">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
+          </span>
+        )}
         {entry.category && (
-          <span className="ml-auto text-[10px] font-medium px-1.5 py-0.5 rounded-md bg-white/[0.05] text-slate-500">
+          <span className="ml-auto text-[10px] font-medium px-1.5 py-0.5 rounded-md bg-white/[0.05] text-slate-500 shrink-0">
             {entry.category}
           </span>
         )}
